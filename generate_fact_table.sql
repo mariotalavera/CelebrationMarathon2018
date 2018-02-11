@@ -1,0 +1,7 @@
+-- bib, distance, distance_s
+SELECT race, place, place_sex, substr(a.division_total,1,instr(a.division_total, '/')-1) division_total, division, bib, name, sex, age, city, state, pace, pace_s, '10k' 	distance, a."10k" duration, a."10k_s" duration_s FROM celebration18_dump a UNION ALL
+SELECT race, place, place_sex, substr(a.division_total,1,instr(a.division_total, '/')-1) division_total, division, bib, name, sex, age, city, state, pace, pace_s, '15k' 	distance, a."15k",			a."15k_s" 			 FROM celebration18_dump a UNION ALL
+SELECT race, place, place_sex, substr(a.division_total,1,instr(a.division_total, '/')-1) division_total, division, bib, name, sex, age, city, state, pace, pace_s, 'half' 	distance, a.half,			a.half_s 			 FROM celebration18_dump a UNION ALL
+SELECT race, place, place_sex, substr(a.division_total,1,instr(a.division_total, '/')-1) division_total, division, bib, name, sex, age, city, state, pace, pace_s, '22.5m'	distance, a."22.5m",		a."22.5m_s" 		 FROM celebration18_dump a UNION ALL
+SELECT race, place, place_sex, substr(a.division_total,1,instr(a.division_total, '/')-1) division_total, division, bib, name, sex, age, city, state, pace, pace_s, 'time' 	distance, a.time,			a.time_s 			 FROM celebration18_dump a UNION ALL
+SELECT race, place, place_sex, substr(a.division_total,1,instr(a.division_total, '/')-1) division_total, division, bib, name, sex, age, city, state, pace, pace_s, 'net' 	distance, a.net,			a.net_s 			 FROM celebration18_dump a ;
